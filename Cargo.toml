@@ -1,10 +1,10 @@
 [package]
-name = "systimeutils"
+name = "datetimeutils"
 version = "0.1.0"
 authors = ["Kartikaya Gupta <kats@bliss.staktrace.com>"]
 edition = "2018"
 description = "A zero-dependency crate with some date/time/calendar utilities"
-documentation = "https://docs.rs/systimeutils"
+documentation = "https://docs.rs/datetimeutils"
 readme = "README.md"
 keywords = ["date", "time", "calendar"]
 categories = ["date-and-time"]
