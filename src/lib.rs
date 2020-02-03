@@ -193,6 +193,26 @@ impl PostEpochTime {
         Self::from(&SystemTime::now())
     }
 
+    /// Returns the number of milliseconds passed since the unix epoch.
+    pub fn milliseconds_since_epoch(&self) -> u128 {
+        self.delta.as_millis()
+    }
+
+    /// Returns the number of microseconds passed since the unix epoch.
+    pub fn microseconds_since_epoch(&self) -> u128 {
+        self.delta.as_micros()
+    }
+
+    /// Returns the number of nanoseconds passed since the unix epoch.
+    pub fn nanoseconds_since_epoch(&self) -> u128 {
+        self.delta.as_nanos()
+    }
+
+    /// Returns the number of complete seconds passed since the unix epoch.
+    pub fn seconds_since_epoch(&self) -> u64 {
+        self.delta.as_secs()
+    }
+
     /// Returns the number of complete days passed since the unix epoch.
     pub fn days_since_epoch(&self) -> u64 {
         self.delta.as_secs() / seconds_in_day()
