@@ -1,5 +1,7 @@
 datetimeutils
 =============
+[![Build Status](https://travis-ci.org/staktrace/datetimeutils.svg?branch=master)](https://travis-ci.org/staktrace/datetimeutils)
+[![Crate](https://img.shields.io/crates/v/datetimeutils.svg)](https://crates.io/crates/datetimeutils)
 
 A handful of utility functions for dealing with `std::time::SystemTime` in somewhat-useful ways.
 If you need handling for timezones, look elsewhere. This crate only deals with simple stuff.
@@ -7,7 +9,7 @@ The main attraction is that it has zero external dependencies, so if it does wha
 
 API
 ---
-There's a bunch of public functions in the crate to do basic datetime stuff such as find the number of days in a particular year or index months..
+There's a bunch of public functions in the crate to do basic datetime stuff such as find the number of days in a particular year or index months.
 Also there's a struct `PostEpochTime` which effectively wraps a `std::time::SystemTime` but can provide human-readable date/time values from it.
 See full rustdoc at [https://docs.rs/datetimeutils](https://docs.rs/datetimeutils).
 

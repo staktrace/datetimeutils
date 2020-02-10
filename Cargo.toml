@@ -3,13 +3,17 @@ name = "datetimeutils"
 version = "0.1.2"
 authors = ["Kartikaya Gupta <kats@bliss.staktrace.com>"]
 edition = "2018"
+license = "0BSD"
+
 description = "A zero-dependency crate with some date/time/calendar utilities"
-documentation = "https://docs.rs/datetimeutils"
 homepage = "https://github.com/staktrace/datetimeutils/blob/master/README.md"
 repository = "https://github.com/staktrace/datetimeutils"
 readme = "README.md"
 keywords = ["date", "time", "calendar"]
 categories = ["date-and-time"]
-license = "0BSD"
+
+[badges]
+travis-ci = { repository = "staktrace/datetimeutils" }
+maintenance = { status = "passively-maintained" }
 
 [dependencies]
