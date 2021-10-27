@@ -183,7 +183,7 @@ impl PostEpochTime {
     /// in the future relative to the unix epoch, or an error will be returned.
     pub fn from(st: &SystemTime) -> Result<Self, SystemTimeError> {
         Ok(PostEpochTime {
-            delta: st.duration_since(SystemTime::UNIX_EPOCH)?
+            delta: st.duration_since(SystemTime::UNIX_EPOCH)?,
         })
     }
 
@@ -268,7 +268,8 @@ impl PostEpochTime {
                 break;
             }
             days -= in_month;
-            month = month_from_index(index_from_month(month) + 1).expect("Month should never overflow");
+            month =
+                month_from_index(index_from_month(month) + 1).expect("Month should never overflow");
         }
         (month, days)
     }
@@ -318,14 +319,17 @@ impl PostEpochTime {
 
 impl fmt::Display for PostEpochTime {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{}, {} {} {} {:02}:{:02}:{:02}", 
+        write!(
+            f,
+            "{}, {} {} {} {:02}:{:02}:{:02}",
             day_abbrev_string(self.day_of_week()),
             self.day_of_month(),
             month_abbrev_string(self.month()),
             self.year(),
             self.hour(),
             self.minute(),
-            self.second())
+            self.second()
+        )
     }
 }
 
