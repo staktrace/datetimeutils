@@ -13,7 +13,6 @@ keywords = ["date", "time", "calendar"]
 categories = ["date-and-time"]
 
 [badges]
-travis-ci = { repository = "staktrace/datetimeutils" }
 maintenance = { status = "passively-maintained" }
 
 [dependencies]

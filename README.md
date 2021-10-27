@@ -1,6 +1,6 @@
 datetimeutils
 =============
-[![Build Status](https://travis-ci.org/staktrace/datetimeutils.svg?branch=master)](https://travis-ci.org/staktrace/datetimeutils)
+![Build Status](https://github.com/staktrace/datetimeutils/actions/workflows/test.yml/badge.svg)
 [![Crate](https://img.shields.io/crates/v/datetimeutils.svg)](https://crates.io/crates/datetimeutils)
 
 A handful of utility functions for dealing with `std::time::SystemTime` in somewhat-useful ways.
